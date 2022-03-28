@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="kgkrunch_extensions_tab" translate="label" sortOrder="100">
+            <label>Kgkrunch Password Protector</label>
+        </tab>
+        <section id="PasswordProtector" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Password Protector</label>
+            <tab>kgkrunch_extensions_tab</tab>
+            <resource>Kgkrunch_PasswordProtector::kgkrunch_passwordprotector</resource>
+            <group id="Configuration" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Configuration</label>
+                <field id="isEnabled" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable Password Protector?</comment>
+                </field>
+				 <field id="Password" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Frontend Password</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
